@@ -1,12 +1,12 @@
 import chalk from "chalk";
 import mongoose from "mongoose";
 
-export const Database = (db_url) => {
+export const database = (db_url) => {
   mongoose
     .connect(db_url)
     .then(() =>
       console.log(
-        `${chalk.bgGreen(" INFO ")} ${chalk.blue(
+        `${chalk.bgGreen(" INFO ")} ${chalk.blue.bold(
           "MongoDB connected successfully"
         )}`
       )

@@ -2,9 +2,10 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import bodyParser from "body-parser";
-import { Database } from "./src/Database/index.js";
 import chalk from "chalk";
 import "dotenv/config";
+import { database } from "./src/database/index.js";
+import router from "./src/router/index.js";
 
 const app = express();
 
@@ -15,8 +16,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Connect To Database
-Database(process.env.DATABASE_URL);
+database(process.env.DATABASE_URL);
 
+app.use("/api", router);
 app.get("/", (req, res) => {
   res.json({
     message: "Welcome! to my server👋🏻",
@@ -24,7 +26,7 @@ app.get("/", (req, res) => {
 });
 
 // PORT
-const port = 3000;
+const port = 5000;
 app.listen(port, () =>
   console.log(
     `${chalk.bgGreen(" INFO ")} Server running on ${chalk.blue.bold(
