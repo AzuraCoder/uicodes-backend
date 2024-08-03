@@ -1,0 +1,15 @@
+{
+  "name": "hono-crud",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.17.0",
+    "hono": "^4.5.3",
+    "prisma": "^5.17.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "ts-node": "^10.9.2"
+  }
+}
