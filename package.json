@@ -1,16 +1,13 @@
 {
   "name": "uicodes-backend",
   "scripts": {
-    "dev": "tsx watch src/index.ts"
+    "start": "vercel dev",
+    "deploy": "vercel"
   },
   "dependencies": {
-    "@hono/node-server": "^1.12.0",
-    "hono": "^4.5.3",
-    "prisma": "^5.17.0",
-    "vercel": "^35.2.3"
+    "hono": "^4.5.3"
   },
   "devDependencies": {
-    "@types/node": "^20.11.17",
-    "tsx": "^4.7.1"
+    "vercel": "^32.4.1"
   }
 }
