@@ -1,15 +1,15 @@
 {
-  "name": "hono-crud",
+  "name": "uicodes-backend",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "tsx watch src/index.ts"
   },
   "dependencies": {
-    "@prisma/client": "^5.17.0",
+    "@hono/node-server": "^1.12.0",
     "hono": "^4.5.3",
     "prisma": "^5.17.0"
   },
   "devDependencies": {
-    "@types/bun": "latest",
-    "ts-node": "^10.9.2"
+    "@types/node": "^20.11.17",
+    "tsx": "^4.7.1"
   }
 }
